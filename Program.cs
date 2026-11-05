@@ -22,6 +22,12 @@ while (opcion != 7)
         case 2:
             MostrarContactos();
             break;
+         case 3:
+            BuscarContacto();
+            break;
+        case 4:
+            ContarContactos();
+            break;
     }
 }
 static void AgregarContacto()
@@ -57,4 +63,45 @@ static void MostrarContactos()
             linea = archivo.ReadLine();
         }
     }
+}
+
+static void BuscarContacto()
+{
+    Console.WriteLine("Nombre a buscar:");
+    string buscado = Console.ReadLine();
+    bool encontrado = false;
+
+    using (var archivo = new StreamReader("contactos.txt"))
+    {
+        string linea = archivo.ReadLine();
+        while (linea != null)
+        {
+            if (linea.Contains(buscado))
+            {
+                Console.WriteLine(linea);
+                encontrado = true;
+            }
+            linea = archivo.ReadLine();
+        }
+    }
+
+    if (!encontrado)
+    {
+        Console.WriteLine("No se encontró");
+    }
+}
+static void ContarContactos()
+{
+    int cantidad = 0;
+
+    using (var archivo = new StreamReader("contactos.txt"))
+    {
+        string linea = archivo.ReadLine();
+        while (linea != null)
+        {
+            if (linea.Trim() != "") cantidad++;
+            linea = archivo.ReadLine();
+        }
+    }
+    Console.WriteLine($"Total de contactos: {cantidad}");
 }
