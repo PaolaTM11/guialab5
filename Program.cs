@@ -16,5 +16,23 @@ while (opcion != 7)
 
     switch (opcion)
     {
+        case 1:
+            AgregarContacto();
+            break;
     }
+}
+static void AgregarContacto()
+{
+    Console.WriteLine("ID:");
+    string id = Console.ReadLine();
+    Console.WriteLine("Nombre:");
+    string nombre = Console.ReadLine();
+    Console.WriteLine("Teléfono:");
+    string telefono = Console.ReadLine();
+
+    using (var archivo = new StreamWriter("contactos.txt", true))
+    {
+        archivo.WriteLine($"{id},{nombre},{telefono}");
+    }
+    Console.WriteLine("Contacto guardado");
 }

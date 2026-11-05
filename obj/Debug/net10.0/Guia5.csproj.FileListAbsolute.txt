@@ -1,0 +1,15 @@
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\bin\Debug\net10.0\Guia5.exe
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\bin\Debug\net10.0\Guia5.deps.json
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\bin\Debug\net10.0\Guia5.runtimeconfig.json
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\bin\Debug\net10.0\Guia5.dll
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\bin\Debug\net10.0\Guia5.pdb
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.AssemblyInfo.cs
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.sourcelink.json
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.dll
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\refint\Guia5.dll
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.pdb
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\Guia5.genruntimeconfig.cache
+C:\Users\PC\Desktop\2026-2\fp\Guia5\Guia5\obj\Debug\net10.0\ref\Guia5.dll
