@@ -19,6 +19,9 @@ while (opcion != 7)
         case 1:
             AgregarContacto();
             break;
+        case 2:
+            MostrarContactos();
+            break;
     }
 }
 static void AgregarContacto()
@@ -35,4 +38,23 @@ static void AgregarContacto()
         archivo.WriteLine($"{id},{nombre},{telefono}");
     }
     Console.WriteLine("Contacto guardado");
+}
+
+static void MostrarContactos()
+{
+    if (!File.Exists("contactos.txt"))
+    {
+        Console.WriteLine("No hay contactos");
+        return;
+    }
+
+    using (var archivo = new StreamReader("contactos.txt"))
+    {
+        string linea = archivo.ReadLine();
+        while (linea != null)
+        {
+            Console.WriteLine(linea);
+            linea = archivo.ReadLine();
+        }
+    }
 }
