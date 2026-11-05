@@ -31,6 +31,9 @@ while (opcion != 7)
         case 5:
             GuardarBinario();
             break;
+        case 6:
+            LeerBinario();
+            break;
     }
 }
 static void AgregarContacto()
@@ -124,4 +127,23 @@ static void GuardarBinario()
         }
     }
     Console.WriteLine("Archivo binario creado");
+}
+static void LeerBinario()
+{
+    if (!File.Exists("contactos.bin"))
+    {
+        Console.WriteLine("Primero guarde el archivo binario");
+        return;
+    }
+
+    using (var archivo = new BinaryReader(File.OpenRead("contactos.bin")))
+    {
+        while (archivo.BaseStream.Position < archivo.BaseStream.Length)
+        {
+            int id = archivo.ReadInt32();
+            string nombre = archivo.ReadString();
+            string telefono = archivo.ReadString();
+            Console.WriteLine($"{id} - {nombre} - {telefono}");
+        }
+    }
 }
