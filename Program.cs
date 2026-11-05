@@ -28,6 +28,9 @@ while (opcion != 7)
         case 4:
             ContarContactos();
             break;
+        case 5:
+            GuardarBinario();
+            break;
     }
 }
 static void AgregarContacto()
@@ -104,4 +107,21 @@ static void ContarContactos()
         }
     }
     Console.WriteLine($"Total de contactos: {cantidad}");
+}
+static void GuardarBinario()
+{
+    using (var lector = new StreamReader("contactos.txt"))
+    using (var archivo = new BinaryWriter(File.Open("contactos.bin", FileMode.Create)))
+    {
+        string linea = lector.ReadLine();
+        while (linea != null)
+        {
+            string[] partes = linea.Split(',');
+            archivo.Write(int.Parse(partes[0]));
+            archivo.Write(partes[1]);
+            archivo.Write(partes[2]);
+            linea = lector.ReadLine();
+        }
+    }
+    Console.WriteLine("Archivo binario creado");
 }
